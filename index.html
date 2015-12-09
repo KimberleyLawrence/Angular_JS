@@ -27,7 +27,8 @@
        <img src="img/the-book-of-trees.jpg">
        <!-- adding newly added property as an expression for classes, product.name product.price-->
        <p class="title"> {{ product.name }} </p>
-       <p class="price"> {{ product.price }} </p>
+       <!-- AngularJS gets the value of product.price, it sends the number to currency filter. The pipe symbol | takes the output on the left and "pipes" into the right, it formats the currency with the dollar sign and the correct decimal places-->
+       <p class="price"> {{ product.price | currency }} </p>
        <p class="date"> </p>
      </div>
    </div>
