@@ -4,4 +4,8 @@ app.controller('MainController',
                  $scope.title = 'My own string';
                  //adding new property - promo
                  $scope.promo = 'Promos own string';
+                 $scope.product= {
+                   name: 'The life of Trees',
+                   price: 19
+                 }
                }]);
