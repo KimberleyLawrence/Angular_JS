@@ -6,6 +6,8 @@ app.controller('MainController',
                  $scope.promo = 'Promos own string';
                  $scope.product= {
                    name: 'The life of Trees',
-                   price: 19
+                   price: 19,
+                   //adding in a new property year, month, date
+                   pubdate: new Date('2014', '03', '08')
                  }
                }]);

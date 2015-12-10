@@ -25,12 +25,13 @@
         <div class="col-md-6">
      <div class="thumbnail">
        <img src="img/the-book-of-trees.jpg">
-       <!-- adding newly added property as an expression for classes, product.name product.price-->
-       <p class="title"> {{ product.name }} </p>
-       <!-- AngularJS gets the value of product.price, it sends the number to currency filter. The pipe symbol | takes the output on the left and "pipes" into the right, it formats the currency with the dollar sign and the correct decimal places-->
-       <p class="price"> {{ product.price | currency }} </p>
-       <p class="date"> </p>
-     </div>
+       <!-- adding newly added property as an expression for classes, product.name product.price, adding in an uppercase filter and piping it in to the name-->
+            <p class="title"> {{ product.name | uppercase }} </p>
+<!-- AngularJS gets the value of product.price, it sends the number to currency filter. The pipe symbol | takes the output on the left and "pipes" into the right, it formats the currency with the dollar sign and the correct decimal places-->
+            <p class="price"> {{ product.price | currency }} </p>
+            <!-- adding in a new expression to display a new property, and using date pipe filter to display correctly -->
+            <p class="date"> {{ product.pubdate | date}} </p>
+          </div>>
    </div>
 
       </div>
