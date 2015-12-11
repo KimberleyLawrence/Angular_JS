@@ -29,9 +29,12 @@
               <!-- adding newly added property as an expression for classes, product.name product.price, adding in an uppercase filter and piping it in to the name-->
   <!-- adding in new html ng-repeat -->
           <div ng-repeat="product in products" class="col-md-6">
-    <div class="thumbnail">
-      <img src="img/the-book-of-trees.jpg">
-  
+            <div class="thumbnail">
+        <!--
+            <img src="img/the-book-of-trees.jpg">
+        replacing this code ^^ with vv code, will remove the double up of front covers for the books. ng-src is a directive that sets the img elements src to a property in the controller -->
+            <img ng-src= "{{ product.cover }}">
+
        <!-- adding newly added property as an expression for classes, product.name product.price, adding in an uppercase filter and piping it in to the name-->
             <p class="title"> {{ product.name | uppercase }} </p>
 <!-- AngularJS gets the value of product.price, it sends the number to currency filter. The pipe symbol | takes the output on the left and "pipes" into the right, it formats the currency with the dollar sign and the correct decimal places-->
