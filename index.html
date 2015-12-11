@@ -22,9 +22,16 @@
         <h1>{{ title }}</h1>
         <!-- adding h2 element and using expression to display promo-->
         <h2> {{promo}}</h2>
-        <div class="col-md-6">
-     <div class="thumbnail">
-       <img src="img/the-book-of-trees.jpg">
+
+          <!--div class="col-md-6" deleted
+            <div class="thumbnail">
+              <img src="img/the-book-of-trees.jpg"> -->
+              <!-- adding newly added property as an expression for classes, product.name product.price, adding in an uppercase filter and piping it in to the name-->
+  <!-- adding in new html ng-repeat -->
+          <div ng-repeat="product in products" class="col-md-6">
+    <div class="thumbnail">
+      <img src="img/the-book-of-trees.jpg">
+  
        <!-- adding newly added property as an expression for classes, product.name product.price, adding in an uppercase filter and piping it in to the name-->
             <p class="title"> {{ product.name | uppercase }} </p>
 <!-- AngularJS gets the value of product.price, it sends the number to currency filter. The pipe symbol | takes the output on the left and "pipes" into the right, it formats the currency with the dollar sign and the correct decimal places-->
