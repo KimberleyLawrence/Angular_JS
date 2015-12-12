@@ -41,8 +41,17 @@
             <p class="price"> {{ product.price | currency }} </p>
             <!-- adding in a new expression to display a new property, and using date pipe filter to display correctly -->
             <p class="date"> {{ product.pubdate | date}} </p>
-          </div>>
-   </div>
+          </div>
+          <!-- adding a new rating element, to create an interactive rating system-->
+          <div class="rating">
+      <!-- adding the ng-click directive to call the function into use from the maincontroller.js-->
+            <p class="likes" ng-click="plusOne($index)"> +
+        <!-- Adding in the likes counter as an expression
+notes for k, you forgot to refrence the $scope category first (originally it was just {{likes}} - which failed), need to tell the program where to find the refrence -->
+            <p> {{product.likes}} </p>
+            </p>
+          </div>
+        </div>
 
       </div>
     </div>
