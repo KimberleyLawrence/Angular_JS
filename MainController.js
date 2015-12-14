@@ -36,6 +36,7 @@ app.controller('MainController',
        }
    ]
     //Adding in a new function to start the interactive component to the apps like counter. Codacademy wanted it written exact as the function, but don't forget to create a name to call to then be able to implement the function
+  // The plusOne function gets the index of the product that was clicked, and then adds one to that products likes property - plusOne doesn't interact with the view at all, it just updates the controller. Any change made to  the controller shows up in the view
     $scope.plusOne = function(index) {
       $scope.products[index].likes += 1;
     };
