@@ -50,6 +50,10 @@
 notes for k, you forgot to refrence the $scope category first (originally it was just {{likes}} - which failed), need to tell the program where to find the refrence -->
             <p> {{product.likes}} </p>
             </p>
+            <!-- adding in an interactive dislike button -->
+            <p class="dislikes" ng-click="minusOne($index)"> -
+     <p>{{product.dislikes}} </p>
+   </p>
           </div>
         </div>
 
