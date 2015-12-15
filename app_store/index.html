@@ -21,7 +21,8 @@
           <img class="icon" ng-src="{{ move.icon }}">
           <h2 class="title">{{ move.title }}</h2>
           <p class="developer">{{ move.developer }}</p>
-          <p class="price">{{ move.price | currency }}</p>-->
+          <p class="price">{{ move.price | currency }}	 						</p>-->
+  <!-- Using the new directive as the HTML element app-info, objects pass from the controllers scope ($scope.shutterbug) into the <app-info> elelments info attribute so that it displays-->
            <app-info info="move"></app-info>
         </div>
 
