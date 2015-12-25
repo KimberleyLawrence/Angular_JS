@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,52 +18,26 @@
             <h2>5-day forecast</h2>
             <div class="forecast" ng-repeat="day in fiveDay.days">
               <div class="day row">
-
-                <!-- datetime -->
-                <div class="weekday col-xs-4">
-
+                <div class="weekday col-md-4">
+                  <p>{{ day.datetime | date }}</p>
                 </div>
-
-
-                <!-- icon -->
-                <div class="weather col-xs-3">
-
+                <div class="weather col-md-3">
+                  <img ng-src="{{ day.icon }}">
                 </div>
-
-                <div class="col-xs-1"></div>
-
-
-                <!-- high -->
-                <div class="high col-xs-2">
-
-
+                <div class="weather col-md-1">
                 </div>
-
-
-                <!-- low -->
-                <div class="low col-xs-2">
-
+                <div class="high col-md-2">
+                  <p>{{ day.high }}&deg;</p>
+                </div>
+                <div class="low col-md-2">
+                  <p>{{ day.low }}&deg;</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        </ul>
+        
       </div>
     </div>
-
-    <!-- Modules -->
-    <script src="js/app.js"></script>
-
-    <!-- Controllers -->
-    <script src="js/controllers/MainController.js"></script>
-
-
-    <!-- Services -->
-<script src="js/services/forecast.js"> </script>
-
-    <!-- Directives -->
-
-
-  </body>
+</body>
 </html>
