@@ -13,6 +13,10 @@ app.config(function ($routeProvider) {
     });
 });
 //Not when a user visits /, a view will be contructed by injecting home.html into the <div ng-view></div> in index.htmlvar app = angular.module('GalleryApp', ['ngRoute']);
+    .when('/photos/:id',{
+    controller: 'PhotoController',
+    templateUrl: 'views/photo.html'
+    })
 app.config(function ($routeProvider) {
   $routeProvider
     .when('/', {
